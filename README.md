@@ -1,7 +1,7 @@
 ## 介紹
-這是用來模擬CPU在計算時會使用到register、tree等資料結構，用C語言寫，其中含括很多.c檔
+指令經過 compiler 後，會編譯出 assembly code，通常會使用register暫存數值，並用tree的概念分配operator和operant，用C語言寫，其中含括很多.c檔
 ## 動機、內容
-暫存器儲存空間雖然有限，不過讀寫速度非常快，因此我模擬出表示法，將輸入的內容先儲存於暫存器，讓CPU計算時可直接從暫存器中拿取，並馬上運算
+register儲存空間雖然有限，不過讀寫速度非常快，因此我模擬出表示法，將輸入的內容先儲存於暫存器，讓CPU計算時可直接從暫存器中拿取，並馬上運算
 ## 實作 
 因為數字運算皆為一個運算子搭配兩個數字或數字串，因此我利用binary tree，先把數字放在leaf node、運算子放在它們的parent node，並將leaf node存入register，再提取register中的值，依照運算子執行指令
 
